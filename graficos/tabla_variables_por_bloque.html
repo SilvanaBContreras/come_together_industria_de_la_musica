@@ -1,0 +1,111 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    background-color: #EAEAEA;
+    font-weight: bold;
+    text-align: left;
+    padding: 6px;
+    border: 1px solid #BFBFBF;
+}
+td {
+    vertical-align: top;
+    padding: 6px;
+    border: 1px solid #D0D0D0;
+}
+td:nth-child(1) {
+    font-weight: bold;
+    width: 13%;
+}
+td:nth-child(2) {
+    text-align: center;
+    width: 7%;
+}
+td:nth-child(3) {
+    width: 24%;
+}
+td:nth-child(4) {
+    width: 18%;
+}
+td:nth-child(5) {
+    width: 38%;
+    font-family: Consolas, monospace;
+    font-size: 10px;
+}
+</style>
+</head>
+<body>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>bloque</th>
+      <th>n_variables</th>
+      <th>descripcion</th>
+      <th>rol_en_analisis</th>
+      <th>variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identificación</td>
+      <td>2</td>
+      <td>Identificación única del artista.</td>
+      <td>Identificación / no predictora</td>
+      <td>chartmetric_id, artist_name</td>
+    </tr>
+    <tr>
+      <td>Metadata</td>
+      <td>10</td>
+      <td>Información descriptiva del artista: país, género, pronombres, sello, formato y estado.</td>
+      <td>Control / caracterización</td>
+      <td>country, country_short, pronoun_title, pronoun_short, record_label, major_record_label, primary_genre, genre_short, band, muerto_disuelto</td>
+    </tr>
+    <tr>
+      <td>Streaming</td>
+      <td>7</td>
+      <td>Audiencia, popularidad y consumo en plataformas de streaming.</td>
+      <td>Predictora digital</td>
+      <td>sp_followers, sp_monthly_listeners, sp_popularity, deezer_fans, shazam_count, pandora_lifetime_streams, pandora_lifetime_stations_added</td>
+    </tr>
+    <tr>
+      <td>Playlists</td>
+      <td>15</td>
+      <td>Presencia y alcance en playlists curatoriales y no curatoriales.</td>
+      <td>Predictora digital</td>
+      <td>sp_playlist_total_reach, num_sp_editorial_playlists, num_sp_playlists, sp_editorial_playlist_total_reach, num_am_editorial_playlists, num_am_playlists, num_de_editorial_playlists, num_de_playlists, de_playlist_total_reach, de_editorial_playlist_total_reach, num_az_editorial_playlists, num_az_playlists, num_yt_editorial_playlists, num_yt_playlists, yt_playlist_total_reach</td>
+    </tr>
+    <tr>
+      <td>Redes sociales</td>
+      <td>7</td>
+      <td>Audiencia, engagement y presencia en plataformas sociales.</td>
+      <td>Predictora digital</td>
+      <td>ins_followers, twitter_followers, tiktok_followers, tiktok_likes, tiktok_top_video_views, tiktok_top_video_comments, tiktok_track_posts</td>
+    </tr>
+    <tr>
+      <td>YouTube</td>
+      <td>4</td>
+      <td>Métricas del canal y consumo audiovisual en YouTube.</td>
+      <td>Predictora digital</td>
+      <td>ycs_subscribers, ycs_views, youtube_daily_video_views, youtube_monthly_video_views</td>
+    </tr>
+    <tr>
+      <td>Actividad en vivo</td>
+      <td>8</td>
+      <td>Eventos en vivo documentados para 2024-2025.</td>
+      <td>Target / descriptiva live</td>
+      <td>n_shows_24_25, n_shows_with_capacity_24_25, capacity_24_25, avg_venue_capacity_24_25, n_cities_24_25, n_countries_24_25, shows_per_country_24_25, off_cycle</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
