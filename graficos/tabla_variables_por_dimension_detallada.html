@@ -1,0 +1,639 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #222222;
+    background-color: #FFFFFF;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: #EAEAEA;
+    font-weight: bold;
+    text-align: left;
+    padding: 7px;
+    border: 1px solid #D0D0D0;
+    font-size: 11px;
+}
+
+td {
+    vertical-align: top;
+    padding: 7px;
+    border: 1px solid #D0D0D0;
+    line-height: 1.35;
+    background-color: #FFFFFF;
+}
+
+td.dimension {
+    width: 16%;
+    font-weight: bold;
+}
+
+td.n-variables {
+    width: 7%;
+    text-align: center;
+}
+
+td.descripcion-dimension {
+    width: 25%;
+}
+
+td.variable {
+    width: 22%;
+    font-family: Consolas, monospace;
+    font-size: 10px;
+}
+
+td.que-mide {
+    width: 30%;
+}
+
+code {
+    font-family: Consolas, monospace;
+    font-size: 10px;
+    color: #222222;
+}
+
+tr:nth-child(even) td {
+    background-color: #F7F7F7;
+}
+
+.grouped-left {
+    vertical-align: top;
+}
+
+.grouped-right {
+    vertical-align: top;
+}
+
+</style>
+</head>
+
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Dimensión</th>
+            <th>n_variables</th>
+            <th>Descripción</th>
+            <th>Variable</th>
+            <th>Qué mide</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+                <tr>
+                    <td class="dimension grouped-left" rowspan="2" style="border-left: 8px solid #BDBDBD;">
+                        Identificación
+                    </td>
+                    <td class="n-variables" rowspan="2">
+                        2
+                    </td>
+                    <td class="descripcion-dimension" rowspan="2">
+                        Identificación única del artista dentro del dataset y de la base de Chartmetric.
+                    </td>
+                    <td class="variable">
+                        <code>artist_name</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #BDBDBD;">
+                        Nombre del artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>chartmetric_id</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #BDBDBD;">
+                        Identificador único del artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="10" style="border-left: 8px solid #7F7F7F;">
+                        Metadata
+                    </td>
+                    <td class="n-variables" rowspan="10">
+                        10
+                    </td>
+                    <td class="descripcion-dimension" rowspan="10">
+                        Información descriptiva del artista: país, género, pronombres, sello discográfico, formato y otros atributos de clasificación.
+                    </td>
+                    <td class="variable">
+                        <code>band</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Banda o artista solista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>country</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        País origen del artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>country_short</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        País origen agrupado en territorios.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>genre_short</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Género musical principal agrupado.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>major_record_label</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Discográfica multinacional.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>muerto_disuelto</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Indica si el artista figura como fallecido, disuelto o inactivo.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>primary_genre</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Género musical principal.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>pronoun_short</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Pronombre autoasignado reagrupado.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>pronoun_title</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Pronombre autoasignado.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>record_label</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #7F7F7F;">
+                        Discográfica.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="7" style="border-left: 8px solid #636EFA;">
+                        Streaming
+                    </td>
+                    <td class="n-variables" rowspan="7">
+                        7
+                    </td>
+                    <td class="descripcion-dimension" rowspan="7">
+                        Audiencia, popularidad y consumo del artista en plataformas de streaming.
+                    </td>
+                    <td class="variable">
+                        <code>deezer_fans</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Variable que mide deezer fans.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>pandora_lifetime_stations_added</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Cantidad acumulada de estaciones de Pandora a las que fue agregado el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>pandora_lifetime_streams</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Cantidad acumulada de reproducciones del artista en Pandora.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>shazam_count</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Cantidad acumulada de identificaciones del artista en Shazam.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>sp_followers</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Cantidad de seguidores del artista en Spotify.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>sp_monthly_listeners</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Cantidad de oyentes mensuales del artista en Spotify.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>sp_popularity</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #636EFA;">
+                        Índice de popularidad del artista en Spotify.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="15" style="border-left: 8px solid #EF553B;">
+                        Playlists
+                    </td>
+                    <td class="n-variables" rowspan="15">
+                        15
+                    </td>
+                    <td class="descripcion-dimension" rowspan="15">
+                        Presencia del artista en playlists de distintas plataformas y, cuando corresponde, en playlists de alto alcance.
+                    </td>
+                    <td class="variable">
+                        <code>de_editorial_playlist_total_reach</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Alcance total estimado de las playlists editoriales de Deezer en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>de_playlist_total_reach</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Alcance total estimado de las playlists de Deezer en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_am_editorial_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists editoriales de Apple Music en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_am_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists de Apple Music en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_az_editorial_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists editoriales de Amazon Music en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_az_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists de Amazon Music en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_de_editorial_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists editoriales de Deezer en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_de_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists de Deezer en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_sp_editorial_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists editoriales de Spotify en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_sp_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists de Spotify en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_yt_editorial_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists editoriales de YouTube en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>num_yt_playlists</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Cantidad de playlists de YouTube en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>sp_editorial_playlist_total_reach</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Alcance total estimado de las playlists editoriales de Spotify en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>sp_playlist_total_reach</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Alcance total estimado de las playlists de Spotify en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>yt_playlist_total_reach</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #EF553B;">
+                        Alcance total estimado de las playlists de YouTube en las que aparece el artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="7" style="border-left: 8px solid #06D49D;">
+                        Redes sociales
+                    </td>
+                    <td class="n-variables" rowspan="7">
+                        7
+                    </td>
+                    <td class="descripcion-dimension" rowspan="7">
+                        Tamaño de audiencia, interacción y presencia del artista en plataformas sociales.
+                    </td>
+                    <td class="variable">
+                        <code>ins_followers</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de seguidores del artista en Instagram.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>tiktok_followers</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de seguidores del artista en TikTok.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>tiktok_likes</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad total de likes asociados al perfil del artista en TikTok.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>tiktok_top_video_comments</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de comentarios de los videos principales con música del artista en TikTok.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>tiktok_top_video_views</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de visualizaciones de los videos principales con música del artista en TikTok.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>tiktok_track_posts</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de publicaciones de TikTok que utilizan tracks asociados al artista.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>twitter_followers</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #06D49D;">
+                        Cantidad de seguidores del artista en Twitter/X.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="4" style="border-left: 8px solid #AB63FA;">
+                        YouTube
+                    </td>
+                    <td class="n-variables" rowspan="4">
+                        4
+                    </td>
+                    <td class="descripcion-dimension" rowspan="4">
+                        Métricas de canal, suscriptores y consumo audiovisual del artista en YouTube.
+                    </td>
+                    <td class="variable">
+                        <code>ycs_subscribers</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #AB63FA;">
+                        Cantidad de suscriptores del canal del artista en YouTube.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>ycs_views</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #AB63FA;">
+                        Cantidad total de visualizaciones del canal del artista en YouTube.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>youtube_daily_video_views</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #AB63FA;">
+                        Cantidad diaria de visualizaciones de videos del artista en YouTube.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>youtube_monthly_video_views</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #AB63FA;">
+                        Cantidad mensual de visualizaciones de videos del artista en YouTube.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="dimension grouped-left" rowspan="8" style="border-left: 8px solid #222222;">
+                        Conciertos
+                    </td>
+                    <td class="n-variables" rowspan="8">
+                        8
+                    </td>
+                    <td class="descripcion-dimension" rowspan="8">
+                        Actividad en vivo documentada para el artista durante el período 2024-2025.
+                    </td>
+                    <td class="variable">
+                        <code>avg_venue_capacity_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Capacidad promedio de los recintos asociados a los shows del artista durante 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>capacity_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Capacidad total documentada de los recintos asociados a los shows del artista durante 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>n_cities_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Cantidad de ciudades con shows documentados para el artista durante el período 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>n_countries_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Cantidad de países con shows documentados para el artista durante el período 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>n_shows_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Cantidad de shows documentados para el artista durante el período 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>n_shows_with_capacity_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Cantidad de shows documentados que cuentan con información de capacidad del recinto durante 2024-2025.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>off_cycle</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Indica si el artista se encuentra fuera de ciclo activo de lanzamiento o promoción.
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="variable">
+                        <code>shows_per_country_24_25</code>
+                    </td>
+                    <td class="que-mide grouped-right" style="border-right: 8px solid #222222;">
+                        Cantidad promedio de shows documentados por país durante el período 2024-2025.
+                    </td>
+                </tr>
+                
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -39,6 +39,11 @@ env/
 *df*.txt
 
 # =========================
+# Claude
+# =========================
+.claude/
+
+# =========================
 # Salidas de APIs / datos crudos
 # =========================
 chartmetric_liveevents_2024_2025/
