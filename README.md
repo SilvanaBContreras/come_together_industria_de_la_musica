@@ -1,4 +1,4 @@
-# "Come Together": cruzando métricas de streaming, redes sociales y conciertos en busca de diferencias sistemáticas entre artistas de la industria de la música
+# "Come Together": cruzando métricas de streaming, playlists, redes sociales y conciertos en busca de diferencias sistemáticas entre artistas de la industria de la música
 
 [cite_start]Este repositorio contiene el código de extracción, preprocesamiento y modelado desarrollado para la entrega final del **Taller de Tesis I** de la **Maestría en Explotación de Datos y Descubrimiento del Conocimiento (DMEyF)** de la Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA).
 
