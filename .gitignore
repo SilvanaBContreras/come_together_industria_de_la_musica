@@ -29,6 +29,7 @@ env/
 *.csv
 *.parquet
 *.feather
+*.xlsx
 
 # =========================
 # Archivos de texto sensibles o de trabajo
