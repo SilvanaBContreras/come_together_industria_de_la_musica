@@ -52,7 +52,7 @@ El proyecto implementa una estrategia analítica complementaria en dos grandes e
 
 ## 📩 Contacto Profesional
 
-* **LinkedIn:** [Silvana Contreras](https://www.linkedin.com/in/silvanabcontrerasok/)
+* **LinkedIn:** [Silvana Contreras](https://www.linkedin.com/in/silvanacontrerasok/)
 * **GitHub:** [@SilvanaBContreras](https://github.com/SilvanaBContreras)
 * **Email:** [scontreras@liaa.dc.uba.ar](mailto:scontreras@liaa.dc.uba.ar)
 * **Substack:** [POLEA](https://poleaia.substack.com) – Publicación sobre inteligencia artificial, estudios de frontera y ciencia argentina.
