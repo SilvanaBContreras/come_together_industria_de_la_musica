@@ -9,7 +9,7 @@ Este repositorio contiene el código de extracción, preprocesamiento y modelado
 
 ## 📌 Resumen del Proyecto
 
-[cite_start]El objetivo central de este trabajo es analizar qué perfiles emergen de la combinación de métricas digitales, streaming, playlists, YouTube y redes sociales, y cómo se distribuye la actividad en vivo documentada dentro de cada perfil. Además, se busca identificar qué variables
+El objetivo central de este trabajo es analizar qué perfiles emergen de la combinación de métricas digitales, streaming, playlists, YouTube y redes sociales, y cómo se distribuye la actividad en vivo documentada dentro de cada perfil. Además, se busca identificar qué variables
 del ecosistema digital están más asociadas al nivel de actividad en vivo de un artista y qué dimensión tiene mayor capacidad explicativa.
 
 A partir de un enfoque centrado en el artista y no en las canciones, se construyó un dataset propio con **7.000 artistas únicos de alta visibilidad global**. 
@@ -52,7 +52,7 @@ El proyecto implementa una estrategia analítica complementaria en dos grandes e
 
 ## 📩 Contacto Profesional
 
-* **LinkedIn:** [Silvana Contreras](https://www.linkedin.com/in/silvanabcontreras/)
+* **LinkedIn:** [Silvana Contreras](https://www.linkedin.com/in/silvanabcontrerasok/)
 * **GitHub:** [@SilvanaBContreras](https://github.com/SilvanaBContreras)
 * **Email:** [scontreras@liaa.dc.uba.ar](mailto:scontreras@liaa.dc.uba.ar)
 * **Substack:** [POLEA](https://poleaia.substack.com) – Publicación sobre inteligencia artificial, estudios de frontera y ciencia argentina.
