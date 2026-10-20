@@ -1,6 +1,6 @@
 # "Come Together": cruzando métricas de streaming, playlists, redes sociales y conciertos en busca de diferencias sistemáticas entre artistas musicales
 
-Este repositorio contiene el código de extracción, preprocesamiento y modelado desarrollado para el Trabajo Final Integrador de la Carrera de Especialización en Explotación de Datos y Descubrimiento del Conocimiento, primer año de la Maestría en Explotación de Datos y Descubrimiento del Conocimiento (DMEyF), Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA).
+Este repositorio contiene el código de extracción, preprocesamiento y modelado desarrollado para el Trabajo Final Integrador de la Carrera de Especialización en Explotación de Datos y Descubrimiento del Conocimiento, primer año de la Maestría en Explotación de Datos y Descubrimiento del Conocimiento, Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA).
 
 **Autora:** Silvana Contreras
 **Fecha:** octubre de 2026
@@ -25,7 +25,8 @@ Con el artista como unidad de análisis, se construyó un dataset propio de 7.00
 
 ## 🔒 Política de acceso a los datos
 
-El dataset resultante se denomina *Top Music Artists 2026: A Cross-Platform Dataset of 7,000 Music Artists Across Streaming, Live Events, and Social Media*.
+El dataset resultante se denomina *Top Music Artists 2026: A Cross-Platform Dataset of 7,000 Music Artists Across Streaming, Live Events, and Social Media*. 
+El listado inicial de artistas proviene del dataset público Make Music Equal (CC BY-SA 4.0). Las salidas de las notebooks se depuraron para no exponer valores individuales por artista.
 
 > ⚠️ **Disponibilidad del dataset.** Los datos provienen de la API de Chartmetric, fuente privada líder en analítica de la industria musical. Por sus términos de servicio, los datos individuales no pueden publicarse ni distribuirse en este repositorio.
 
@@ -55,6 +56,7 @@ Las notebooks se ejecutan en este orden:
 | | `CT_SC_boosting_regression.ipynb` | LightGBM principal, importancias por *gain*, SHAP y lectura agrupada por dimensión |
 | | `CT_SC_boosting_poisson.ipynb`, `CT_SC_boosting_tweenie.ipynb` | LightGBM con objetivos Poisson y Tweedie (análisis de sensibilidad) |
 
+Archivos de datos esperados en la raíz (no incluidos): mme_artist_info_DATASET.csv (Make Music Equal), dataset_7000_53.csv (dataset completo) y dataset_4913_53.csv (artistas con dato en la variable objetivo)
 Carpetas y archivos auxiliares:
 
 - `graficos/`: figuras generadas por las notebooks.
@@ -70,7 +72,7 @@ Carpetas y archivos auxiliares:
 
 ## ⚙️ Entorno
 
-Python 3.13 con pandas, NumPy, scikit-learn, statsmodels, LightGBM 4.6, Optuna 4.9, matplotlib y seaborn.
+Python 3.13 con pandas 3.0, NumPy 2.4, SciPy 1.17, scikit-learn 1.8, statsmodels 0.14, LightGBM 4.6, Optuna 4.9, umap-learn 0.5, matplotlib 3.10, seaborn 0.13 y Plotly. Los valores SHAP se calculan con LightGBM (pred_contrib), sin la librería shap.
 
 ## 📩 Contacto
 
