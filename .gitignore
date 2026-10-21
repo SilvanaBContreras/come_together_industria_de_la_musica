@@ -66,3 +66,5 @@ jambase_extract_test/
 # =========================
 .DS_Store
 Thumbs.db
+
+modelitos_*/
