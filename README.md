@@ -72,11 +72,19 @@ Carpetas y archivos auxiliares:
 
 ## ⚙️ Entorno
 
-Python 3.13 con pandas 3.0, NumPy 2.4, SciPy 1.17, scikit-learn 1.8, statsmodels 0.14, LightGBM 4.6, Optuna 4.9, umap-learn 0.5, matplotlib 3.10, seaborn 0.13 y Plotly. Los valores SHAP se calculan con LightGBM (pred_contrib), sin la librería shap.
+Python 3.13 con pandas 3.0, NumPy 2.4, SciPy 1.17, scikit-learn 1.8, statsmodels 0.14, LightGBM 4.6, Optuna 4.9, umap-learn 0.5, matplotlib 3.10 y seaborn 0.13. Los valores SHAP se calculan con LightGBM (pred_contrib), sin la librería shap.
+
+Las versiones exactas están en `requirements.txt`:
+
+```
+pip install -r requirements.txt
+```
+
+Los modelos entrenados (`modelitos_*/`) no se incluyen en el repositorio; se regeneran al ejecutar las notebooks de boosting.
 
 ## 📩 Contacto
 
-- LinkedIn: Silvana Contreras
+- LinkedIn: [Silvana Contreras](https://www.linkedin.com/in/silvanacontrerasok/)
 - GitHub: [@SilvanaBContreras](https://github.com/SilvanaBContreras)
 - Email: scontreras@liaa.dc.uba.ar
-- Substack: POLEA, blog sobre inteligencia artificial, estudios de frontera, impacto y ciencia argentina
+- Substack: [POLEA](https://poleaia.substack.com), blog sobre inteligencia artificial, estudios de frontera, impacto y ciencia argentina
