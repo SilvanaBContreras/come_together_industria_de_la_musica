@@ -40,21 +40,21 @@ Quien cuente con credenciales válidas de la API de Chartmetric puede usar este 
 
 ## 🗂️ Estructura del repositorio
 
-Las notebooks se ejecutan en este orden:
+Las notebooks se numeran según el orden de ejecución (`CT`: *Come Together*):
 
 | Etapa | Notebook | Contenido |
 |---|---|---|
-| Construcción del dataset | `CT_SC_make_music_equal_dataset.ipynb` | Selección de los 7.000 artistas a partir del dataset público *Make Music Equal* (CC BY-SA 4.0) |
-| | `CT_SC_chartmetric_api.ipynb` | Extracción de datos por API, por cohortes de artistas |
-| | `CT_SC_dataset_cohorte1.ipynb`, `CT_SC_dataset_cohorte2.ipynb` | Armado del dataset a partir de las respuestas de la API y agregación de eventos en vivo |
-| | `CT_SC_EDA1.ipynb` | Construcción de la variable objetivo, tratamiento de faltantes y dataset final |
-| Análisis exploratorio | `CT_SC_EDA2.ipynb` | Variables por dimensión, distribuciones, correlaciones y redundancia |
-| | `CT_SC_categ_multiv.ipynb` | Análisis multivariado de variables categóricas |
-| No supervisado | `CT_SC_clustering_jerarquico.ipynb` | Exploración inicial: clustering jerárquico |
-| | `CT_SC_clustering_varios.ipynb` | K-Medoids, GMM y *Spectral Clustering*; solución final con k = 3 |
-| Supervisado | `CT_SC_regresion_binomial_negativa.ipynb` | OLS sobre `log1p`, binomial negativa y modelo de dos etapas |
-| | `CT_SC_boosting_regression.ipynb` | LightGBM principal, importancias por *gain*, SHAP y lectura agrupada por dimensión |
-| | `CT_SC_boosting_poisson.ipynb`, `CT_SC_boosting_tweenie.ipynb` | LightGBM con objetivos Poisson y Tweedie (análisis de sensibilidad) |
+| 1. Construcción del dataset | `1A_CT_seleccion_artistas.ipynb` | Selección de los 7.000 artistas a partir del dataset público *Make Music Equal* (CC BY-SA 4.0) |
+| | `1B_CT_extraccion_api.ipynb` | Extracción de datos por API, por cohortes de artistas |
+| | `1C_CT_dataset_cohorte1.ipynb`, `1D_CT_dataset_cohorte2.ipynb` | Armado del dataset a partir de las respuestas de la API y agregación de eventos en vivo |
+| | `1E_CT_dataset_final.ipynb` | Construcción de la variable objetivo, tratamiento de faltantes y dataset final |
+| 2. Análisis exploratorio | `2A_CT_EDA.ipynb` | Variables por dimensión, distribuciones, correlaciones y redundancia |
+| | `2B_CT_categoricas_multivariado.ipynb` | Análisis multivariado de variables categóricas |
+| 3. No supervisado | `3A_CT_clustering_jerarquico.ipynb` | Exploración inicial: clustering jerárquico |
+| | `3B_CT_clustering_perfiles.ipynb` | K-Medoids, GMM y *Spectral Clustering*; solución final con k = 3 |
+| 4. Supervisado | `4A_CT_modelos_estadisticos.ipynb` | OLS sobre `log1p`, binomial negativa y modelo de dos etapas |
+| | `4B_CT_lgbm_regression.ipynb` | LightGBM principal, importancias por *gain*, SHAP y lectura agrupada por dimensión |
+| | `4C_CT_lgbm_poisson.ipynb`, `4D_CT_lgbm_tweedie.ipynb` | LightGBM con objetivos Poisson y Tweedie (análisis de sensibilidad) |
 
 Archivos de datos esperados en la raíz (no incluidos): mme_artist_info_DATASET.csv (Make Music Equal), dataset_7000_53.csv (dataset completo) y dataset_4913_53.csv (artistas con dato en la variable objetivo)
 Carpetas y archivos auxiliares:
