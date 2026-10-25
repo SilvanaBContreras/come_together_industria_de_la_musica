@@ -39,6 +39,7 @@ env/
 *secret*.txt
 *df*.txt
 graficos/artistas_argentina_*.txt
+graficos/artistas_50_por_cluster_*.txt
 
 # =========================
 # Claude

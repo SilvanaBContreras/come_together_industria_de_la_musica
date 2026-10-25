@@ -3,7 +3,15 @@
 Este repositorio contiene el código de extracción, preprocesamiento y modelado desarrollado para el Trabajo Final Integrador de la Carrera de Especialización en Explotación de Datos y Descubrimiento del Conocimiento, primer año de la Maestría en Explotación de Datos y Descubrimiento del Conocimiento, Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA).
 
 **Autora:** Silvana Contreras
+
 **Fecha:** octubre de 2026
+
+## 📩 Contacto
+
+- LinkedIn: [Silvana Contreras](https://www.linkedin.com/in/silvanacontrerasok/)
+- GitHub: [@SilvanaBContreras](https://github.com/SilvanaBContreras)
+- Email: scontreras@liaa.dc.uba.ar
+- Substack: [POLEA](https://poleaia.substack.com), blog sobre inteligencia artificial, estudios de frontera, impacto y ciencia argentina
 
 ## 📌 Resumen del proyecto
 
@@ -48,15 +56,15 @@ Las notebooks se numeran según el orden de ejecución (`CT`: *Come Together*):
 | | `1B_CT_extraccion_api.ipynb` | Extracción de datos por API, por cohortes de artistas |
 | | `1C_CT_dataset_cohorte1.ipynb`, `1D_CT_dataset_cohorte2.ipynb` | Armado del dataset a partir de las respuestas de la API y agregación de eventos en vivo |
 | | `1E_CT_dataset_final.ipynb` | Construcción de la variable objetivo, tratamiento de faltantes y dataset final |
-| 2. Análisis exploratorio | `2A_CT_EDA.ipynb` | Variables por dimensión, distribuciones, correlaciones y redundancia |
-| | `2B_CT_categoricas_multivariado.ipynb` | Análisis multivariado de variables categóricas |
+| 2. Análisis exploratorio | `2A_CT_EDA.ipynb` | Variables por dimensión, distribuciones, correlaciones, redundancia y combinaciones de variables categóricas |
 | 3. No supervisado | `3A_CT_clustering_jerarquico.ipynb` | Exploración inicial: clustering jerárquico |
 | | `3B_CT_clustering_perfiles.ipynb` | K-Medoids, GMM y *Spectral Clustering*; solución final con k = 3 |
 | 4. Supervisado | `4A_CT_modelos_estadisticos.ipynb` | OLS sobre `log1p`, binomial negativa y modelo de dos etapas |
 | | `4B_CT_lgbm_regression.ipynb` | LightGBM principal, importancias por *gain*, SHAP y lectura agrupada por dimensión |
 | | `4C_CT_lgbm_poisson.ipynb`, `4D_CT_lgbm_tweedie.ipynb` | LightGBM con objetivos Poisson y Tweedie (análisis de sensibilidad) |
 
-Archivos de datos esperados en la raíz (no incluidos): mme_artist_info_DATASET.csv (Make Music Equal), dataset_7000_53.csv (dataset completo) y dataset_4913_53.csv (artistas con dato en la variable objetivo)
+Archivos de datos esperados en la raíz (no incluidos): mme_artist_info_DATASET.csv (Make Music Equal), dataset_7000_53.csv (dataset completo) y dataset_4913_53.csv (artistas con dato en la variable objetivo).
+
 Carpetas y archivos auxiliares:
 
 - `graficos/`: figuras generadas por las notebooks.
@@ -81,10 +89,3 @@ pip install -r requirements.txt
 ```
 
 Los modelos entrenados (`modelitos/`) no se incluyen en el repositorio; se regeneran al ejecutar las notebooks de boosting.
-
-## 📩 Contacto
-
-- LinkedIn: [Silvana Contreras](https://www.linkedin.com/in/silvanacontrerasok/)
-- GitHub: [@SilvanaBContreras](https://github.com/SilvanaBContreras)
-- Email: scontreras@liaa.dc.uba.ar
-- Substack: [POLEA](https://poleaia.substack.com), blog sobre inteligencia artificial, estudios de frontera, impacto y ciencia argentina
