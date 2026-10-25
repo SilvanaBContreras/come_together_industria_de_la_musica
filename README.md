@@ -60,7 +60,7 @@ Archivos de datos esperados en la raíz (no incluidos): mme_artist_info_DATASET.
 Carpetas y archivos auxiliares:
 
 - `graficos/`: figuras generadas por las notebooks.
-- `modelitos_lgbm-*`: modelos LightGBM entrenados (ensambles de 100 semillas).
+- `modelitos/<experimento>/{dev,full}`: modelos LightGBM entrenados (ensambles de 100 semillas), por objetivo (`lgbm-regression`, `lgbm-poisson`, `lgbm-tweedie`).
 - `*_optuna.db`: estudios de optimización bayesiana de hiperparámetros.
 
 ## 🛠️ Metodología
@@ -80,7 +80,7 @@ Las versiones exactas están en `requirements.txt`:
 pip install -r requirements.txt
 ```
 
-Los modelos entrenados (`modelitos_*/`) no se incluyen en el repositorio; se regeneran al ejecutar las notebooks de boosting.
+Los modelos entrenados (`modelitos/`) no se incluyen en el repositorio; se regeneran al ejecutar las notebooks de boosting.
 
 ## 📩 Contacto
 
